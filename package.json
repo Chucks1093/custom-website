@@ -1,0 +1,20 @@
+{
+  "name": "custom-website",
+  "version": "1.0.0",
+  "description": "custom website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.10.4"
+  }
+}
