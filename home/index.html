@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Real Estate</title>
+     <link rel="stylesheet" href="../remixicon/fonts/remixicon.css">
+     <link rel="stylesheet" href="style.css">
+</head>
+<style>
+     *{
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          border: 1px solid red;
+     }
+     img{
+          width: 100px;
+     }
+</style>
+<body class="relative w-96 mx-auto">
+     <div class=" hidden w-screen bg-black flex justify-center items-center absolute inset-0">
+          <img class=" h-2/4 " src="./images/kelly.png" alt="">
+     </div>
+     <header class="flex px-2 justify-between items-center h-12 w-full">
+          <button class="w-6 h-6 flex justify-center items-center text-center bg-white "><i class="ri-settings-3-fill"></i></button>
+          <img class="h-2/4 object-contain" src="./images/logo.png" alt="">
+          <button class="w-6 h-6"><img  class="h-full block object-contain flex justify-center items-center " src="./images//rab.jpg" alt=""></button>
+     </header>
+     <section class="w-full bg-gray-100 mx-auto">
+          <div class="h-20 w-full flex justify-center items-center">
+               <form class="bg-white w-4/5 pr-2 rounded-md mx-auto mt- flex justify-center">
+                    <input class="w-full rounded-md indent-4 mr-1" type="text">
+                    <button type="submit"><i class="ri-search-line"></i></button>
+               </form>
+          </div>
+          <div id="btn-container " class="w-full font-bold flex justify-between px-4 text-gray-300">
+               <button id="all" class="bg-blue-500 w-16 rounded-md">All</button>
+               <button id="house" class="w-16 rounded-md">House</button>
+               <button id="hotel" class="w-16 rounded-md">Hotel</button>
+          </div>
+          <div class="item-container relative h-[18rem] flex overflow-scroll space-x-5 py-3 px-2 mb-4">
+               <div class="item w-48 absolute p-1.5 shadow-xl rounded-md bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-xl h-full " href="./macmilian.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./images/christian-macmillan-p3EPduDO9mw-unsplash_transcpr.jpg" alt="">
+                         </a>
+                         <div class="absolute bg-black text-white inset-0  rounded-md text-center h-14 w-fit px-2.5">
+                              <p>Price</p>
+                              <p id="price" class="text-sm">$175,000.00</p>
+                         </div>
+                    </div>
+                    <div class="space-y-1.5">
+                         <h2 id="house_name" class="font-bold">Macmillian Homes</h2>
+                         <p id="house_location" class="text-[.65rem]">Lorem ipsum dolor sit, amet consec.</p>
+                         <div class="flex space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.8rem]">3</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-store-3-line"></i></span>
+                                   <p id="bath_no" class="text-[.8rem]">3</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.8rem]">5000 mm</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="item w-48 absolute transfrom translate-x-[100%] p-1.5 rounded-md bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full h-full " href="./macmilian.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./images/christian-macmillan-p3EPduDO9mw-unsplash_transcpr.jpg" alt="">
+                         </a>
+                         <div class="absolute bg-black text-white inset-0  rounded-md text-center h-14 w-fit px-2.5">
+                              <p>Price</p>
+                              <p id="price" class="text-sm">$175,000.00</p>
+                         </div>
+                    </div>
+                    <div class="space-y-1.5">
+                         <h2 id="house_name" class="font-bold">Macmillian Homes</h2>
+                         <p id="house_location" class="text-[.65rem]">Lorem ipsum dolor sit, amet consec.</p>
+                         <div class="flex space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.8rem]">3</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-store-3-line"></i></span>
+                                   <p id="bath_no" class="text-[.8rem]">3</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class="ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.8rem]">5000 mm</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+     <section>
+          <div class="flex justify-between">
+               <p>Near You</p>
+               <p>See All</p>
+          </div>
+          <div id="iten-container">
+               <div id="item" class="flex justify-between">
+                    <div>
+                         <img src="./images/grant-lemons-jTCLppdwSEc-unsplash.jpg" alt="">
+                    </div>
+                    <div class="" >
+                         <h2 id="house_name">Aurora Dream House</h2>
+                         <p id="location"></p>
+                         <p id="house_price">$150,000,000</p>
+                    </div>
+               </div>
+          </div>
+     </section>
+</body>
+<footer>
+     <div class="flex justify-between">
+          <img class="block" src="./images/toshiba-pngrepo-com.png" alt="">
+          <img class="block" src="./images/slack-logo-pngrepo-com.png" alt="">
+          <img class="block" src="./images//netflix-pngrepo-com.png" alt="">
+     </div>
+     <p class="text-center">Made with 💙 by Sebastian</p>
+</footer>
+</html>
