@@ -6,8 +6,9 @@ function populateHomeInfo(info){
      const agentName = document.getElementById('agent-name')
      const agentImg = document.getElementById('agent-img')
      const houseName = document.getElementById('house-name')
-     const houseLocation = document.getElementById('house-location')
-     const houseDescription = document.getElementById('house-information')
+     const houseLocation = document.getElementById('house-location');
+     const houseDescription = document.querySelector('#house-information');
+
      const landSize = document.getElementById('landscape_size');
      const power_time = document.getElementById('power_number');
      const bedNo = document.getElementById('room_number')
@@ -22,6 +23,7 @@ function populateHomeInfo(info){
      houseName.textContent = `${info[indices.cardIndex].agent_listings[indices.cardInfoNo].house_name} Homes.`;
      houseLocation.textContent = info[indices.cardIndex].agent_listings[indices.cardInfoNo].house_location;
      houseDescription.textContent = info[indices.cardIndex].agent_listings[indices.cardInfoNo].house_description;
+
 }
 
 export default populateHomeInfo;
