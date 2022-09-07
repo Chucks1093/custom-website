@@ -7,11 +7,11 @@ function populateHomeInfo(info){
      const agentImg = document.getElementById('agent-img')
      const houseName = document.getElementById('house-name')
      const houseLocation = document.getElementById('house-location')
-     const houseDescription = document.getElementById('house-description')
+     const houseDescription = document.getElementById('house-information')
      const landSize = document.getElementById('landscape_size');
      const power_time = document.getElementById('power_number');
      const bedNo = document.getElementById('room_number')
-     const indices = getLocalStorage();
+     let indices = getLocalStorage();
      img.setAttribute("src", `${info[indices.cardIndex].agent_listings[indices.cardInfoNo].house_image}.jpg`)
      price.textContent = `$${info[indices.cardIndex].agent_listings[indices.cardInfoNo].house_price}`
      agentName.textContent = info[indices.cardIndex].agent_name
