@@ -63,7 +63,7 @@ export default [
                     house_location : "Harum, Tenetur",
                     house_land_size : "700",
                     no_of_bedrooms : "7",
-                    light_time : ""
+                    light_time : "13"
                },
                {
                     house_name : "Gables",

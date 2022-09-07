@@ -6,6 +6,7 @@ import homes_categories from './home/script_files/homes_categories';
 import populateNearCards from './home/script_files/populateNearCards';
 import populateHomeInfo from './home/script_files/populateHomeInfo';
 import populateAgentPage from './home/script_files/populateAgentPage';
+import populateAgentListings from './home/script_files/populateAgentListings';
 
 
 function animationOnce(cover){
@@ -18,9 +19,12 @@ function animationEnter(cover){
 
 function animationLeave(done){
      const cover = document.getElementById("cover-page")
-     return gsap.to(cover, { clipPath: "inset(0 0% 0 0)" , duration:.5, ease:"power3.out", onComplete:()=>done()})
+     return gsap.to(cover, { clipPath: "inset(0 0% 0 0)" , duration:.7, ease:"power3.out", onComplete:()=>done()})
 }
 
+barba.hooks.beforeEnter(() => {
+     window.scrollTo(0,0)
+})
 
 
 barba.init({
@@ -81,6 +85,7 @@ barba.init({
                once({next}){
                     animationOnce(next.container.children[0])
                     populateAgentPage(homes_categories)
+                    populateAgentListings(homes_categories)
                },
                leave({current}){
                     gsap.set(current.container.children[0],{
@@ -92,6 +97,7 @@ barba.init({
                enter({next}) {
                     animationEnter(next.container.children[0])
                     populateAgentPage(homes_categories)
+                    populateAgentListings(homes_categories)
                }
 
           }

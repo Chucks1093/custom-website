@@ -8,7 +8,6 @@ function populateHomeInfo(info){
      const houseName = document.getElementById('house-name')
      const houseLocation = document.getElementById('house-location');
      const houseDescription = document.querySelector('#house-information');
-
      const landSize = document.getElementById('landscape_size');
      const power_time = document.getElementById('power_number');
      const bedNo = document.getElementById('room_number')
