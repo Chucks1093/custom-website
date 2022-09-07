@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Real Estate</title>
+     <link rel="stylesheet" href="./remixicon/fonts/remixicon.css">
+     <link rel="stylesheet" href="./style.css">
+</head>
+<style>
+     *{
+          box-sizing: border-box;
+          /* color: #ebf0f5; */
+          margin: 0;
+          padding: 0;
+          /* border: 1px solid red; */
+     }
+</style>
+<body data-barba="wrapper"  class="relative w-96 mx-auto my-0 bg-gray-100 all:border-box ">
+     <div data-barba="container" data-barba-namespace="home-page">
+          <div id="cover-page" class="home w-96 bg-gray-700 h-screen top-0 z-10 flex mt-0 justify-around items-center flex-col fixed">
+               <img class=" h-[15%] w-[6%] object-contain  absolute top-[7%] select-none " src="./static/logo-cover.svg" alt="">
+               <h1 class="text-white text-[4rem] font-[650] select-none ">Home</h1>
+          </div>
+          <header class="flex px-2 justify-between items-center h-12 w-full  ">
+               <button class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md p-[.83rem] shadow-xl mt-3.5 "><i class="ri-settings-3-fill text-gray-500 "></i></button>
+               <img class="h-2/4 object-contain mt-3.5  " src="./static/logo-home.svg" alt="">
+               <button class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md mt-3.5   relative shadow-xl "><img src="./static/dev.jpeg" class="w-6 h-6 object-cover object-top rounded-xl border-grey-500 border-[3px] border-solid shadow-2xl " />
+                    <div class="w-[.45rem] h-[.45rem] absolute top-0 right-0 rounded-xl bg-red-400 "></div>
+               </button>
+          </header>
+          <section class="w-full mx-auto">
+               <div class="h-20 w-full flex justify-center items-center">
+                    <form class="bg-white w-4/5 pr-2 rounded-md shadow-xl mx-auto mt- flex justify-center">
+                         <input placeholder="Search category of your choice" class=" text-[.6rem] w-full font-[400] block rounded-md indent-4 mr-1 h-[2.1rem] " type="text">
+                         <button type="submit"  class="mr-[.1rem] "><i class="ri-search-line text-gray-500"></i></button>
+                    </form>
+               </div>
+               <div id="btn-container " class="w-full font-[500] flex justify-between px-8 text-white text-[0.8rem] child:h-[1.8rem] child:w-[4.8rem] child:rounded-md  child:shadow-xl ">
+                    <button id="all" class=" bg-gradient-to-r from-[#f97794] to-[#d939cd] ">All</button>
+                    <button id="house" class=" bg-white text-gray-400">House</button>
+                    <button id="house-image" class=" bg-white text-gray-400">Hotel</button>
+               </div>
+               <div id="item-container" class=" mt-[1rem] w-[90%] ml-auto relative h-[20rem] flex overflow-x-scroll py-4 px-4  child:40 ">  
+                   <div class="item absolute p-[.55rem] w-[11rem] shadow-xl rounded-md transform translate-x-[5%] bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-md h-full" href="./home_info.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./static/dev.jpeg" alt="agent" />
+                         </a>
+                         <div class="absolute rounded-md  backdrop-blur-md bg-black/10 shadow-2xl text-white left-1/2 transfrom translate-x-[-50%] bottom-1/2   font-[500] rounded-md text-center  h-fit  w-fit py-1.5 px-6 flex justify-center flex-col">
+                              <p class=" tracking-wider text-[.5rem]">Price</p>
+                              <p id="price" class=" text-[.6rem] "></p>
+                         </div>
+                    </div>
+                    <div class=" mt-3">
+                         <h2 id="house_name" class="font-bold text-gray-700 text-[.85rem] text-center">Homes.</h2>
+                         <p id="house_location" class="text-[.6rem] text-gray-400  "></p>
+                         <div class="mt-[.4rem] flex justify-center space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="content-box p-1 "><i class="text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.58rem]  font-[600] text-gray-700">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-lightbulb-line"></i></span>
+                                   <p id="power_no" class="text-[.58rem] font-[600] text-gray-700 ">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.58rem]  font-[600] text-gray-700"><span class="font-semibold"></span> </p>
+                              </div>
+                         </div>
+                    </div>
+                   </div>
+                   <div class="item absolute p-[.55rem] w-[11rem] shadow-xl rounded-md transform translate-x-[120%] bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-md h-full" href="./home_info.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./static/dev.jpeg" alt="agent" />
+                         </a>
+                         <div class="absolute rounded-md  backdrop-blur-md bg-black/10 shadow-2xl text-white left-1/2 transfrom translate-x-[-50%] bottom-1/2   font-[500] rounded-md text-center  h-fit  w-fit py-1.5 px-6 flex justify-center flex-col">
+                              <p class=" tracking-wider text-[.5rem]">Price</p>
+                              <p id="price" class=" text-[.6rem] "></p>
+                         </div>
+                    </div>
+                    <div class=" mt-3">
+                         <h2 id="house_name" class="font-bold text-gray-700 text-[.85rem] text-center">Homes.</h2>
+                         <p id="house_location" class="text-[.6rem] text-gray-400  "></p>
+                         <div class="mt-[.4rem] flex justify-center space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="content-box p-1 "><i class="text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.58rem]  font-[600] text-gray-700">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-lightbulb-line"></i></span>
+                                   <p id="power_no" class="text-[.58rem] font-[600] text-gray-700 ">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.58rem]  font-[600] text-gray-700"><span class="font-semibold"></span> </p>
+                              </div>
+                         </div>
+                    </div>
+                   </div>
+                   <div class="item absolute p-[.55rem] w-[11rem] shadow-xl rounded-md transform translate-x-[230%] bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-md h-full" href="./home_info.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./static/dev.jpeg" alt="agent" />
+                         </a>
+                         <div class="absolute rounded-md  backdrop-blur-md bg-black/10 shadow-2xl text-white left-1/2 transfrom translate-x-[-50%] bottom-1/2   font-[500] rounded-md text-center  h-fit  w-fit py-1.5 px-6 flex justify-center flex-col">
+                              <p class=" tracking-wider text-[.5rem]">Price</p>
+                              <p id="price" class=" text-[.6rem] "></p>
+                         </div>
+                    </div>
+                    <div class=" mt-3">
+                         <h2 id="house_name" class="font-bold text-gray-700 text-[.85rem] text-center">Homes.</h2>
+                         <p id="house_location" class="text-[.6rem] text-gray-400  "></p>
+                         <div class="mt-[.4rem] flex justify-center space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="content-box p-1 "><i class="text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.58rem]  font-[600] text-gray-700">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-lightbulb-line"></i></span>
+                                   <p id="power_no" class="text-[.58rem] font-[600] text-gray-700 ">}</p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.58rem]  font-[600] text-gray-700"><span class="font-semibold"></span> </p>
+                              </div>
+                         </div>
+                    </div>
+                   </div>
+                   <div class="item absolute p-[.55rem] w-[11rem] shadow-xl rounded-md transform translate-x-[340%] bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-md h-full" href="./home_info.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./static/dev.jpeg" alt="agent" />
+                         </a>
+                         <div class="absolute rounded-md  backdrop-blur-md bg-black/10 shadow-2xl text-white left-1/2 transfrom translate-x-[-50%] bottom-1/2   font-[500] rounded-md text-center  h-fit  w-fit py-1.5 px-6 flex justify-center flex-col">
+                              <p class=" tracking-wider text-[.5rem]">Price</p>
+                              <p id="price" class=" text-[.6rem] "></p>
+                         </div>
+                    </div>
+                    <div class=" mt-3">
+                         <h2 id="house_name" class="font-bold text-gray-700 text-[.85rem] text-center">Homes.</h2>
+                         <p id="house_location" class="text-[.6rem] text-gray-400  "></p>
+                         <div class="mt-[.4rem] flex justify-center space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="content-box p-1 "><i class="text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.58rem]  font-[600] text-gray-700"></p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-lightbulb-line"></i></span>
+                                   <p id="power_no" class="text-[.58rem] font-[600] text-gray-700 "></p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.58rem]  font-[600] text-gray-700"><span class="font-semibold"></span> </p>
+                              </div>
+                         </div>
+                    </div>
+                   </div>
+                   <div class="item absolute p-[.55rem] w-[11rem] shadow-xl rounded-md transform translate-x-[450%] bg-white">
+                    <div class="relative h-40">
+                         <a class="block w-full shadow-md h-full" href="./home_info.html">
+                              <img class="w-full h-full object-cover object-center rounded-md" src="./static/dev.jpeg" alt="agent" />
+                         </a>
+                         <div class="absolute rounded-md  backdrop-blur-md bg-black/10 shadow-2xl text-white left-1/2 transfrom translate-x-[-50%] bottom-1/2   font-[500] rounded-md text-center  h-fit  w-fit py-1.5 px-6 flex justify-center flex-col">
+                              <p class=" tracking-wider text-[.5rem]">Price</p>
+                              <p id="price" class=" text-[.6rem] "></p>
+                         </div>
+                    </div>
+                    <div class=" mt-3">
+                         <h2 id="house_name" class="font-bold text-gray-700 text-[.85rem] text-center">Homes.</h2>
+                         <p id="house_location" class="text-[.6rem] text-gray-400  "></p>
+                         <div class="mt-[.4rem] flex justify-center space-x-2.5">
+                              <div class="flex w-fit items-center">
+                                   <span class="content-box p-1 "><i class="text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-hotel-bed-line"></i></span>
+                                   <p id="room_no" class="text-[.58rem]  font-[600] text-gray-700"></p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-lightbulb-line"></i></span>
+                                   <p id="power_no" class="text-[.58rem] font-[600] text-gray-700 "></p>
+                              </div>
+                              <div class="flex w-fit items-center">
+                                   <span class="mr-1.5"><i class=" text-[0.8rem] text-gray-500 p-1 bg-gray-100 rounded-xl ri-landscape-line"></i></span>
+                                   <p id="house_size" class="text-[.58rem]  font-[600] text-gray-700"><span class="font-semibold"></span> </p>
+                              </div>
+                         </div>
+                    </div>
+                   </div>
+               </div>
+          </section>
+          <section class="bg-gray-100 pt-1 rounded-md ">
+               <div class="flex justify-between mt-3 px-4 items-center">
+                    <p class="text-gray-600 font-bold text-[1rem]">Near You</p>
+                    <p class="text-gray-700 text-[0.8rem]">See All</p>
+               </div>
+               <div id="near-by-container" class="child:mt-6 child:w-72 child:mx-auto child:p-2 child:rounded-md content-box pt-1 pb-3">
+                 <div id="nearby-card" class="bg-white flex justify-between items-center h-36 p-1 shadow-xl">
+                    <div class="w-[8rem]  h-full">
+                         <img id="house-image" class="block rounded-md mr-4 w-full h-full object-cover shadow-md" src="./static/agent-1-2.jpg" alt="">
+                    </div>
+                    <div class="mr-auto child: ml-5 h-full pt-1 " >
+                         <h2 id="house_name" class="text-[.8rem] ml-[.1rem] font-bold text-gray-500 mb-2 ">Aurora House</h2>
+                         <div class="flex w-fit items-center">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-user-line"></i></span>
+                              <p id="house_agent" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Austin Fammer</p>
+                         </div>
+                         <div class="flex w-fit items-center mb-2.5 ">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-map-pin-line"></i></span>
+                              <p id="house_location" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Washinton DC, USA</p>
+                         </div>
+                         <a href="./home_info.html" id="enter" class="text-[.58rem]  font-[600] text-white/90 p-[.2rem] bg-gray-300 shadow-md rounded-md w-[5rem] ">Get Now   📬</a>
+                    </div>
+                 </div>   
+                 <div id="nearby-card" class="bg-white flex justify-between items-center h-36 p-1 shadow-xl">
+                    <div class="w-[8rem]  h-full">
+                         <img id="house-image" class="block rounded-md mr-4 w-full h-full object-cover shadow-md" src="./static/agent-1-2.jpg" alt="">
+                    </div>
+                    <div class="mr-auto child: ml-5 h-full pt-1 " >
+                         <h2 id="house_name" class="text-[.8rem] ml-[.1rem] font-bold text-gray-500 mb-2 ">Aurora House</h2>
+                         <div class="flex w-fit items-center">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-user-line"></i></span>
+                              <p id="house_agent" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Austin Fammer</p>
+                         </div>
+                         <div class="flex w-fit items-center mb-2.5 ">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-map-pin-line"></i></span>
+                              <p id="house_location" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Washinton DC, USA</p>
+                         </div>
+                         <a id="enter" href="./home_info.html" class="text-[.58rem]  font-[600] text-white/90 p-[.2rem] bg-gray-300 shadow-md rounded-md w-[5rem] ">Get Now   📬</a>
+                    </div>
+                 </div> 
+                 <div id="nearby-card" class="bg-white flex justify-between items-center h-36 p-1 shadow-xl">
+                    <div class="w-[8rem]  h-full">
+                         <img id="house-image" class="block rounded-md mr-4 w-full h-full object-cover shadow-md" src="./static/agent-1-2.jpg" alt="">
+                    </div>
+                    <div class="mr-auto child: ml-5 h-full pt-1 " >
+                         <h2 id="house_name" class="text-[.8rem] ml-[.1rem] font-bold text-gray-500 mb-2 ">Aurora House</h2>
+                         <div class="flex w-fit items-center">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-user-line"></i></span>
+                              <p id="house_agent" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Austin Fammer</p>
+                         </div>
+                         <div class="flex w-fit items-center mb-2.5 ">
+                              <span class="content-box mr-1 "><i class="text-[0.8rem] p-[.18rem] text-gray-500 bg-gray-100 rounded-xl ri-map-pin-line"></i></span>
+                              <p id="house_location" class="text-[.58rem]  font-[600] text-gray-700 tracking-wider ">Washinton DC, USA</p>
+                         </div>
+                         <a href="./home_info.html" id="enter" class="text-[.58rem]  font-[600] text-white/90 p-[.2rem] bg-gray-300 shadow-md rounded-md w-[5rem] ">Get Now   📬</a>
+                    </div>
+                 </div>
+               </div>
+          </section>
+          <footer class="m-0 p-0">
+               <div class="flex justify-between mt-6  px-6 py-3 bg-gray-400 text-gray-100 items-center ">
+                    <i title="Dev Community" class="ri-facebook-fill cursor-pointer "></i>
+                    <i title="Github"  class="ri-github-fill cursor-pointer"></i>
+                    <i title="Twitter" class="ri-twitter-fill cursor-pointer"></i>
+                    <i title="Linkedin" class="ri-linkedin-fill cursor-pointer"></i>
+               </div>
+               <!-- <p class="text-center text-[.6em] text-semibold text-gray-400 "> © <span>2022</span></p> -->
+          </footer>    
+     </div>
+     <script type="module" src="index.js"></script>
+
+</body>
+</html>

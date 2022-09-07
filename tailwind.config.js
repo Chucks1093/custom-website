@@ -1,10 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./home/index.html",
+    "index.html",
+    "home_info.html",
+    "agent.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow : {
+        hide : '0px -28px 30px -2px rgb(255, 255, 255)',
+      }
+    },
   },
   variants: {
     extend: {},
