@@ -5,7 +5,7 @@ module.exports = {
     "home_info.html",
     "agent.html",
     "index.js",
-    "./home/script_files/populateHomeInfo.js"
+    "./home/script_files/showMore.js"
   ],
   theme: {
     extend: {
