@@ -21,9 +21,12 @@
 </style>
 <body data-barba="wrapper" class="relative w-96 mx-auto bg-gray-100">
      <div data-barba="container" data-barba-namespace="agent-page">
-          <div id="cover-page" class="agent w-96 bg-gray-700 h-screen top-0 z-10 flex mt-0 justify-around items-center flex-col fixed">
-               <img class=" h-[15%] w-[6%] object-contain  absolute top-[7%] select-none " src="./static/logo-cover.svg" alt="">
-               <h1 class="text-white text-[4rem] font-[650] select-none ">Agent</h1>
+          <div id="cover-page" class="home w-96 bg-gray-700 h-screen top-0 z-10 flex mt-0 justify-center items-center flex-col fixed z-20 ">
+               <div class="absolute flex justify-center items-center h-[fit] w-[100%] overflow-hidden top-[12%]">
+                    <img id="logo-cover" class=" h-[1.7rem] w-[fit] object-contain transform   select-none " src="./static/logo-cover.svg" alt="">
+               </div>
+               <p id="quote" class="text-white w-[72%] leading-6 text-center tracking-wider text-[3rem] font-extrabold select-none ">Agent.</p>
+               <img class="h-fit w-[9%] relative top-[15%] object-contain" src="./static/rolling.svg" alt="">
           </div>
           <header class="flex px-2 justify-between items-center h-12 w-full mt-3.5 ">
                <a href="./home_info.html"><button class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md p-[.83rem] shadow-xl  "><i class="font-extrabold ri-arrow-left-s-line text-gray-700 "></i></button></a>

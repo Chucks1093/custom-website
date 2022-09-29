@@ -11,7 +11,7 @@
 <style>
      *{
           box-sizing: border-box;
-          /* color: #ebf0f5; */
+          /* color: #f8f8f8; */
           margin: 0;
           padding: 0;
           /* border: 1px solid red; */
@@ -19,15 +19,31 @@
 </style>
 <body data-barba="wrapper"  class="relative w-96 mx-auto my-0 bg-gray-100 all:border-box ">
      <div data-barba="container" data-barba-namespace="home-page">
-          <div id="cover-page" class="home w-96 bg-gray-700 h-screen top-0 z-10 flex mt-0 justify-around items-center flex-col fixed">
-               <img class=" h-[15%] w-[6%] object-contain  absolute top-[7%] select-none " src="./static/logo-cover.svg" alt="">
-               <h1 class="text-white text-[4rem] font-[650] select-none ">Home</h1>
+          <div id="cover-page" class="home w-96 bg-gray-700 h-screen top-0 z-10 flex mt-0 justify-center items-center flex-col fixed">
+               <div class="absolute flex justify-center items-center h-[fit] w-[100%] overflow-hidden top-[12%]">
+                    <img id="logo-cover" class=" h-[1.7rem] w-[fit] object-contain transform   select-none " src="./static/logo-cover.svg" alt="">
+               </div>
+               <p id="quote" class="text-white w-[72%] leading-6 text-center tracking-wider text-[.7rem] font-light select-none ">The home is the one place where we can be ourselves and shut out negativity from the world outside. It's so important to have a place where we can go and feel protected from it all; it's something we all deserve.</p>
+               <img class="h-fit w-[9%] relative top-[15%] object-contain" src="./static/rolling.svg" alt="">
+          </div>
+          <div id="profile-cover" class=" w-96 bg-gray-500 bg-opacity-30 h-[100vh] bottom-0 z-[-20] opacity-0 flex mt-0 justify-center items-center  flex-col fixed "></div>
+          <div id="profile-details" class="home bg-[#fdfdf8] h-[50vh] bottom-0 w-[24rem] z-30 fixed tranform translate-y-[100%] rounded-t-[.8rem] p-[.4rem]  ">
+               <div class="bg-[#f97794] h-[10vh]  rounded-t-xl flex justify-around items-center">
+                    <span class=" bg-white grid place-items-center h-[2.4rem] rounded-full shadow-3xl w-[2.4rem] "><img class="h-[55%]" src="./static\/javascript.svg" alt=""></span>
+                    <span class=" bg-white grid place-items-center h-[2.4rem] rounded-full w-[2.4rem] shadow-3xl "><img class="h-[60%]" src="./static/tailwindcss-icon-svgrepo-com.svg" alt=""></span>
+                    <span class=" bg-white grid place-items-center h-[2.4rem] rounded-full w-[2.4rem] shadow-3xl "><img class="h-[60%]" src="./static/webpack-svgrepo-com.svg" alt=""></span>
+                    <span class=" bg-white grid place-items-center h-[2.4rem] rounded-full w-[2.4rem] shadow-3xl "><img class="h-[60%]" src="./static/html-svgrepo-com.svg" alt=""></span>
+               </div>
+               <p class="px-[1.5rem] leading-6 mt-[1.3rem] text-gray-500 text-[.9rem]">Hey there, I am a web developer and I built this Real Estate Application to solidify my understanding of Vanilla javascript and the tailwind CSS framework . I hope you have a great experience as you interact with it !</p>
+               <p class=" px-[1rem] leading-6 mt-[1.3rem] text-gray-400 font-semilight text-[1rem] absolute bottom-[10%]">- Anioke Sebastian</p>
           </div>
           <header class="flex px-2 justify-between items-center h-12 w-full  ">
                <button class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md p-[.83rem] shadow-xl mt-3.5 "><i class="ri-settings-3-fill text-gray-500 "></i></button>
-               <img class="h-4 object-contain mt-3.5  " src="./static/logo-home.svg" alt="">
-               <button class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md mt-3.5   relative shadow-xl "><img src="./static/dev.jpeg" class="w-6 h-6 object-cover object-top rounded-xl border-grey-500 border-[3px] border-solid shadow-2xl " />
-                    <div class="w-[.45rem] h-[.45rem] absolute top-0 right-0 rounded-xl bg-red-400 "></div>
+               <div class="overflow-hidden">
+                    <img id="home-logo" class="h-4 object-contain mt-3.5 " src="./static/logo-home.svg" alt="">
+               </div>
+               <button id="profile-btn" class="w-8 h-8 flex justify-center items-center text-center bg-white rounded-md mt-3.5   relative shadow-xl "><img src="./static/dev.jpeg" class="w-6 h-6 object-cover object-top rounded-xl border-grey-500 border-[3px] border-solid shadow-2xl " />
+                    <div id="notification" class="w-[.45rem] h-[.45rem] absolute top-0 right-0 rounded-xl bg-red-400 "></div>
                </button>
           </header>
           <section class="w-full mx-auto">

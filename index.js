@@ -7,19 +7,78 @@ import populateNearCards from './home/script_files/populateNearCards';
 import populateHomeInfo from './home/script_files/populateHomeInfo';
 import populateAgentPage from './home/script_files/populateAgentPage';
 import populateAgentListings from './home/script_files/populateAgentListings';
+import openProfile from './home/script_files/openProfile';
 
 
 function animationOnce(cover){
-     return gsap.to(cover, { clipPath: "inset(0 100% 0 0)" , duration:.7, delay:2, ease:"power1.out"})
+     const logo = cover.children[0].children[0];
+     const word = cover.children[1];
+     const image = cover
+     const homeLogo = document.querySelector("#home-logo")
+     const tl = gsap.timeline();
+
+     tl
+          .from(logo, {yPercent: 200, duration: 2.3, ease:"Expo.easeInOut" } )
+          .from(word, {autoAlpha: 0, duration: 2.3}, "+=.2")
+          .to(cover, { clipPath: "inset(0 100% 0 0)" , duration:.7, ease:"power4.out"}, "+=3")
+          .from(homeLogo, {yPercent:100, duration:1})
+          
+          .set(logo, {autoAlpha:0}, "+=1")
+          .set(word, {autoAlpha: 0})
+     return tl
+}
+
+function animationOnceImage(cover){
+     const pageCover = cover.querySelector('#cover-page')
+     const logo = pageCover.querySelector('#logo-cover');
+     const word = pageCover.querySelector('#quote');
+     const image = cover.querySelector('#house-img')
+     
+     const tl = gsap.timeline();
+     tl
+          .from(logo, {yPercent: 200, duration: 2.3, ease:"Expo.easeInOut" } )
+          .from(word, {autoAlpha: 0, duration: 2.3}, "+=.2")
+          .to(pageCover, { clipPath: "inset(0 100% 0 0)" , duration:.7, ease:"power4.out"}, "+=3")
+          .from(image, {scale:1.5, duration:1.8, ease: "power3.out"}, "-=0.8")
+          .set(logo, {autoAlpha:0}, "+=1")
+          .set(word, {autoAlpha: 0})
+     return tl
+}
+
+function animationEnterImage(cover){
+     const pageCover = cover.querySelector('#cover-page')
+     const logo = pageCover.querySelector('#logo-cover');
+     const word = pageCover.querySelector('#quote');
+     const image = cover.querySelector('#house-img')
+     
+     const tl = gsap.timeline();
+     tl
+          .from(logo, {yPercent: 100, duration: 1.3, ease:"Expo.easeInOut" })
+          .from(word, {autoAlpha: 0, duration: 1.3}, "+=.2")
+          .to(pageCover, { clipPath: "inset(0 0 0 100%)" , duration:.7, ease:"Expo.easeInOut"}, "+=2")
+          .from(image, {scale:1.5, duration:1.8, ease: "power3.out"}, "-=0.8")
+          .set(logo, {autoAlpha:0}, "+=1")
+          .set(word, {autoAlpha: 0})
+     return tl
 }
 
 function animationEnter(cover){
-     return gsap.to(cover, { clipPath: "inset(0 0 0 100%)" , duration:.6, delay:1, ease:"power3.out"})
+     const logo = cover.children[0].children[0];
+     const word = cover.children[1];
+     const tl = gsap.timeline();
+     tl
+          .from(logo, {yPercent: 100, duration: 1.3, ease:"Expo.easeInOut" } )
+          .from(word, {autoAlpha: 0, duration: 1.3}, "+=.2")
+          .to(cover, { clipPath: "inset(0 0 0 100%)" , duration:.7, ease:"Expo.easeInOut"}, "+=2")
+          .set(logo, {autoAlpha:0}, "+=1")
+          .set(word, {autoAlpha: 0})
+     return tl
 }
+
 
 function animationLeave(done){
      const cover = document.getElementById("cover-page")
-     return gsap.to(cover, { clipPath: "inset(0 0% 0 0)" , duration:.7, ease:"power3.out", onComplete:()=>done()})
+     return gsap.to(cover, { clipPath: "inset(0 0% 0 0)" , duration:.7, ease:"Expo.easeInOut", onComplete:()=>done()})
 }
 
 barba.hooks.beforeEnter(() => {
@@ -38,6 +97,7 @@ barba.init({
                     animationOnce(next.container.children[0])
                     populateCard(homes_categories)
                     populateNearCards(homes_categories)
+                    openProfile()
                },
                leave({current}){
                     gsap.set(current.container.children[0],{
@@ -52,6 +112,7 @@ barba.init({
                     animationEnter(next.container.children[0])
                     populateCard(homes_categories)
                     populateNearCards(homes_categories)
+                    openProfile()
                }
           },
           {
@@ -60,8 +121,9 @@ barba.init({
                     namespace : ["home-info-page"]
                },
                once({next}){
-                    animationOnce(next.container.children[0])
+                    animationOnceImage(next.container)
                     populateHomeInfo(homes_categories)
+               
                     showMore()
                },
                leave({current}){
@@ -72,7 +134,7 @@ barba.init({
                     animationLeave(done)
                },
                enter({next}) {
-                    animationEnter(next.container.children[0])
+                    animationEnterImage(next.container)
                     populateHomeInfo(homes_categories)
                     showMore()
                }
